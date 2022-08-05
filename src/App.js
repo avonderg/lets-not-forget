@@ -116,7 +116,7 @@ function App() {
                   <Card.Header css={{ position: "absolute", zIndex: 1, top: 4 }}>
                     <img
                         alt="forget me not"
-                        src="https://i.pinimg.com/originals/c2/17/39/c217394d809fffbffb74e0f9ae135c41.jpg"
+                        src="https://www.nicepng.com/png/detail/94-941077_blue-flower-clip-art-image-blue-flower-clip.png"
                         width="34px"
                         height="34px"
                     />
@@ -125,7 +125,7 @@ function App() {
                         {/*<Text h4 css={{ lineHeight: "$xs" }}>*/}
                         {/*  Next UI*/}
                         {/*</Text>*/}
-                        <Text size={12} weight="bold" transform="uppercase" color="D0B1E5" css={{ lineHeight: "$xs" }}>
+                        <Text size={12} weight="bold" transform="uppercase" color="c197c7" css={{ lineHeight: "$xs" }}>
                           To-Do
                         </Text>
                       </Grid>
