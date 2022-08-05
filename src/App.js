@@ -116,7 +116,7 @@ function App() {
                   <Card.Header css={{ position: "absolute", zIndex: 1, top: 4 }}>
                     <img
                         alt="forget me not"
-                        src="https://flyclipart.com/thumb2/royal-blue-flowers-background-771036.png"
+                        src="https://www.jing.fm/clipimg/full/82-820577_blue-flower-clipart-nelum-flower-clip-art-transparent.png"
                         width="34px"
                         height="34px"
                     />
@@ -159,10 +159,10 @@ function App() {
             ))}
           </Grid.Container>>
         </div>
-      </div>
-        <Text color="primary">
-          Made with &#xe022 by <Link href="https://github.com/avonderg"> alex vdg </Link>.
+        <Text color="#ff4ecd" style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
+          Made with ❤️ by <Link href="https://github.com/avonderg"> alex vdg </Link>.
         </Text>
+      </div>
     </NextUIProvider>
   );
 }
