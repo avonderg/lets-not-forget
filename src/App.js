@@ -5,7 +5,7 @@
 
 import React from "react";
 import "./App.css";
-import { NextUIProvider } from '@nextui-org/react';
+import {NextUIProvider} from '@nextui-org/react';
 import Todo from "./Components/Todo";
 import { Form } from 'react-bootstrap';
 import { Card, Col, Input, Grid, Text, Button, Row , Spacer} from "@nextui-org/react";
@@ -28,12 +28,12 @@ function FormTodo({ addTodo }) {
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="inputTitle">
           <Form.Label>Task Title</Form.Label>
-          <Form.Control type="title" size="sm" value={header} onChange={e => setHeader(e.target.value)} placeholder="Enter title" />
+          <Form.Control size="sm" type="title" value={header} onChange={e => setHeader(e.target.value)} placeholder="Enter title" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="inputBody">
           <Form.Label >Task Description</Form.Label>
-          <Form.Control type="descr" size="sm" value={value} onChange={e => setValue(e.target.value)} placeholder="Enter description" />
+          <Form.Control size="sm" type="descr"  value={value} onChange={e => setValue(e.target.value)} placeholder="Enter description" />
         </Form.Group>
 
         <Button shadow color="gradient" type="submit">
@@ -45,6 +45,7 @@ function FormTodo({ addTodo }) {
 }
 
 function App() {
+
   const[todos, setTodos] = React.useState([
     {
       header: "Sample",
@@ -78,7 +79,27 @@ function App() {
       <NextUIProvider>
       <div className="app">
         <div className="container">
-          <h1 className="text-center mb-4">Todo List</h1>
+          <Spacer y={2} />
+          <Text
+              h1
+              size={60}
+              css={{
+                textGradient: "45deg, $yellow600 -20%, $red600 100%",
+              }}
+              weight="bold"
+          >
+            Forget Me Nots
+          </Text>
+          <Text
+              h4
+              size={60}
+              css={{
+                textGradient: "45deg, $purple600 -20%, $pink600 100%",
+              }}
+              weight="bold"
+          >
+            A simple to-do platform, for those some of those things you just can't afford to forget. Don't worry, we've got you covered.
+          </Text>
           <FormTodo addTodo={addTodo} />
           <Grid.Container gap={2} justify="center">
             {todos.map((todo, index) => (
