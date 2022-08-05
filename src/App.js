@@ -11,6 +11,7 @@ import { Form } from 'react-bootstrap';
 import { Card, Col, Input, Grid, Text, Button, Row } from "@nextui-org/react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 function FormTodo({ addTodo }) {
   const [value, setValue] = React.useState("");
   const [header, setHeader] = React.useState("");
@@ -24,72 +25,16 @@ function FormTodo({ addTodo }) {
   };
 
   return (
-      // <Form onSubmit={handleSubmit}>
-      //   <Form.Group>
-      //     <Form.Label><b>Add Todo</b></Form.Label>
-      //     <Form.Control type="text" className="input" value={value} onChange={e => setValue(e.target.value)} placeholder="Add new todo" />
-      //   </Form.Group>
-      //   <Button variant="primary mb-3" type="submit">
-      //     Submit
-      //   </Button>
-      // </Form>
-  <Form onSubmit={handleSubmit}>
-  <Card>
-    <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
-      <Col>
-        <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
-         Insert your item here
-        </Text>
-        <Text h4 color="white">
-          <Input
-              bordered
-              labelPlaceholder="Input title"
-              color="secondary" />
-        </Text>
-      </Col>
-    </Card.Header>
-    <Card.Body>
-      <Input
-          width="120px"
-          placeholder="Description"
-      />
-    </Card.Body>
-    <Card.Image
-        src="https://p.turbosquid.com/ts-thumb/Ws/j24pzG/4L/2/png/1648613576/1920x1080/fit_q99/0f4510d150c9fc6e0e6dc12e581947fce7aef44d/2.jpg"
-        objectFit="cover"
-        width="100%"
-        height={340}
-        alt="Card image background"
-    />
-    <Card.Footer
-        isBlurred
-        css={{
-          position: "absolute",
-          bgBlur: "#ffffff66",
-          borderTop: "$borderWeights$light solid rgba(255, 255, 255, 0.2)",
-          bottom: 0,
-          zIndex: 1,
-        }}
-    >
-      <Row>
-        <Col>
-          <Row justify="flex-end">
-            <Button flat auto rounded color="secondary" type="submit">
-              <Text
-                  css={{ color: "inherit" }}
-                  size={12}
-                  weight="bold"
-                  transform="uppercase"
-              >
-               Submit
-              </Text>
-            </Button>
-          </Row>
-        </Col>
-      </Row>
-    </Card.Footer>
-  </Card>
-  </Form>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group>
+          <Form.Label><b>Add Todo</b></Form.Label>
+          <Form.Control type="text" className="input" value={header} onChange={e => setValue(e.target.value)} placeholder="To-Do Title" />
+          <Form.Control type="text" className="input" value={value} onChange={e => setValue(e.target.value)} placeholder="To-Do Description" />
+        </Form.Group>
+        <Button variant="primary mb-3" type="submit">
+          Submit
+        </Button>
+      </Form>
   );
 }
 
