@@ -8,7 +8,7 @@ import "./App.css";
 import { NextUIProvider } from '@nextui-org/react';
 import Todo from "./Components/Todo";
 import { Form } from 'react-bootstrap';
-import {Button, Card} from '@nextui-org/react';
+import { Card, Grid, Text, Button, Row } from "@nextui-org/react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function FormTodo({ addTodo }) {
@@ -69,9 +69,10 @@ function App() {
         <div className="container">
           <h1 className="text-center mb-4">Todo List</h1>
           <FormTodo addTodo={addTodo} />
-          <div>
+          <Grid.Container gap={2} justify="center">
             {todos.map((todo, index) => (
-                <Card>
+                <Grid xs={4}>
+                <Card isHoverable variant="bordered">
                   <Card.Body>
                     <Todo
                         key={index}
@@ -82,8 +83,9 @@ function App() {
                     />
                   </Card.Body>
                 </Card>
+                </Grid>
             ))}
-          </div>
+          </Grid.Container>>
         </div>
       </div>
     </NextUIProvider>

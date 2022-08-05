@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Todo({ todo, index, markTodo, removeTodo }) {
     return (
+
         <div
             className="todo"
         >
