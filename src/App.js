@@ -104,7 +104,7 @@ function App() {
               }}
               weight="bold"
           >
-            A simple to-do platform, for those some of those things you just can't afford to forget. Don't worry, we've got you covered.
+            A simple to-do platform, for some of those things you just can't afford to forget. Don't worry, we've got you covered.
           </Text>
           <Spacer y={4} />
           <FormTodo addTodo={addTodo} />
@@ -116,18 +116,33 @@ function App() {
                   <Card.Header css={{ position: "absolute", zIndex: 1, top: 4 }}>
                     <img
                         alt="forget me not"
-                        src="https://p.turbosquid.com/ts-thumb/Ws/j24pzG/gm/1/png/1648613590/1920x1080/fit_q99/fe9580b795214016bd71de0a98dd958d22eb724f/1.jpg"
+                        src="https://i.pinimg.com/originals/c2/17/39/c217394d809fffbffb74e0f9ae135c41.jpg"
                         width="34px"
                         height="34px"
                     />
-                    <Col>
-                      <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
-                        To-Do
-                      </Text>
-                      <Text h3 color="secondary">
-                        {todo.header}
-                      </Text>
-                    </Col>
+                    <Grid.Container css={{ pl: "$6" }}>
+                      <Grid xs={12}>
+                        {/*<Text h4 css={{ lineHeight: "$xs" }}>*/}
+                        {/*  Next UI*/}
+                        {/*</Text>*/}
+                        <Text size={12} weight="bold" transform="uppercase" color="D0B1E5" css={{ lineHeight: "$xs" }}>
+                          To-Do
+                        </Text>
+                      </Grid>
+                      <Grid xs={12}>
+                        <Text h3 color="secondary">
+                          {todo.header}
+                        </Text>
+                      </Grid>
+                    </Grid.Container>
+                    {/*<Col>*/}
+                    {/*  <Text size={12} weight="bold" transform="uppercase" color="D0B1E5">*/}
+                    {/*    To-Do*/}
+                    {/*  </Text>*/}
+                    {/*  <Text h3 color="secondary">*/}
+                    {/*    {todo.header}*/}
+                    {/*  </Text>*/}
+                    {/*</Col>*/}
                   </Card.Header>
                   <Spacer y={2} />
                   <Card.Body>
