@@ -27,12 +27,12 @@ function FormTodo({ addTodo }) {
   return (
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="inputTitle">
-          <Form.Label>Task Title</Form.Label>
+          <Form.Label weight="bold">Task Title</Form.Label>
           <Form.Control type="title" value={header} onChange={e => setHeader(e.target.value)} placeholder="Enter title" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="inputBody">
-          <Form.Label>Task Description</Form.Label>
+          <Form.Label weight="bold">Task Description</Form.Label>
           <Form.Control type="descr"  value={value} onChange={e => setValue(e.target.value)} placeholder="Enter description" />
         </Form.Group>
 
@@ -41,17 +41,6 @@ function FormTodo({ addTodo }) {
         </Button>
       </Form>
 
-  // <Form>
-  //   <Form.Group className="mb-3" controlId="inputTitle">
-  //     <Form.Label>Task Title</Form.Label>
-  //     <Form.Control type="title" value={value} onChange={e => setValue(e.target.value)} placeholder="Enter title" />
-  //   </Form.Group>
-  //
-  //   <Form.Group className="mb-3" controlId="inputBody">
-  //     <Form.Label>Task Description</Form.Label>
-  //     <Form.Control type="descr"  value={value} onChange={e => setValue(e.target.value)} placeholder="Enter description" />
-  //   </Form.Group>
-  // </Form>
   );
 }
 
