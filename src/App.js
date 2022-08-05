@@ -105,7 +105,7 @@ function App() {
                       </Text>
                     </Col>
                   </Card.Header>
-                  <Card.Body>
+                  <Card.Body css={{ p: 0 }}>
                     <Todo
                         key={index}
                         index={index}
