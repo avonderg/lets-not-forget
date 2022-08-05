@@ -105,7 +105,7 @@ function App() {
                       </Text>
                     </Col>
                   </Card.Header>
-                  <Spacer y={0.5} />
+                  <Spacer y={2} />
                   <Card.Body>
                     <Todo
                         key={index}
