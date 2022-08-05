@@ -26,15 +26,32 @@ function FormTodo({ addTodo }) {
 
   return (
       <Form onSubmit={handleSubmit}>
-        <Form.Group>
-          <Form.Label><b>Add Todo</b></Form.Label>
-          <Form.Control type="text" className="input" value={header} onChange={e => setValue(e.target.value)} placeholder="To-Do Title" />
-          <Form.Control type="text" className="input" value={value} onChange={e => setValue(e.target.value)} placeholder="To-Do Description" />
+        <Form.Group className="mb-3" controlId="inputTitle">
+          <Form.Label>Task Title</Form.Label>
+          <Form.Control type="title" value={header} onChange={e => setHeader(e.target.value)} placeholder="Enter title" />
         </Form.Group>
+
+        <Form.Group className="mb-3" controlId="inputBody">
+          <Form.Label>Task Description</Form.Label>
+          <Form.Control type="descr"  value={value} onChange={e => setValue(e.target.value)} placeholder="Enter description" />
+        </Form.Group>
+
         <Button variant="primary mb-3" type="submit">
           Submit
         </Button>
       </Form>
+
+  // <Form>
+  //   <Form.Group className="mb-3" controlId="inputTitle">
+  //     <Form.Label>Task Title</Form.Label>
+  //     <Form.Control type="title" value={value} onChange={e => setValue(e.target.value)} placeholder="Enter title" />
+  //   </Form.Group>
+  //
+  //   <Form.Group className="mb-3" controlId="inputBody">
+  //     <Form.Label>Task Description</Form.Label>
+  //     <Form.Control type="descr"  value={value} onChange={e => setValue(e.target.value)} placeholder="Enter description" />
+  //   </Form.Group>
+  // </Form>
   );
 }
 
@@ -49,7 +66,7 @@ function App() {
 
   // adds a new todo
   const addTodo = (header, text) => {
-    const newTodos = [...todos,{ header, text }];
+    const newTodos = [...todos,[header,text]];
     setTodos(newTodos);
   };
 
