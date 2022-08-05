@@ -8,7 +8,7 @@ import "./App.css";
 import {NextUIProvider} from '@nextui-org/react';
 import Todo from "./Components/Todo";
 import { Form } from 'react-bootstrap';
-import { Card, Col, Input, Grid, Text, Button, Row , Spacer} from "@nextui-org/react";
+import { Card, Col, Input, Grid, Text, Button, Link , Spacer} from "@nextui-org/react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -116,7 +116,7 @@ function App() {
                   <Card.Header css={{ position: "absolute", zIndex: 1, top: 4 }}>
                     <img
                         alt="forget me not"
-                        src="https://www.nicepng.com/png/detail/94-941077_blue-flower-clip-art-image-blue-flower-clip.png"
+                        src="https://flyclipart.com/thumb2/royal-blue-flowers-background-771036.png"
                         width="34px"
                         height="34px"
                     />
@@ -125,7 +125,7 @@ function App() {
                         {/*<Text h4 css={{ lineHeight: "$xs" }}>*/}
                         {/*  Next UI*/}
                         {/*</Text>*/}
-                        <Text size={12} weight="bold" transform="uppercase" color="c197c7" css={{ lineHeight: "$xs" }}>
+                        <Text size={12} weight="bold" transform="uppercase" color="#c197c7" css={{ lineHeight: "$xs" }}>
                           To-Do
                         </Text>
                       </Grid>
@@ -160,6 +160,9 @@ function App() {
           </Grid.Container>>
         </div>
       </div>
+        <Text color="primary">
+          Made with &#xe022 by <Link href="https://github.com/avonderg"> alex vdg </Link>.
+        </Text>
     </NextUIProvider>
   );
 }
