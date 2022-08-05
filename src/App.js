@@ -8,7 +8,7 @@ import "./App.css";
 import { NextUIProvider } from '@nextui-org/react';
 import Todo from "./Components/Todo";
 import { Form } from 'react-bootstrap';
-import { Card, Col, Input, Grid, Text, Button, Row } from "@nextui-org/react";
+import { Card, Col, Input, Grid, Text, Button, Row , Spacer} from "@nextui-org/react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -105,7 +105,8 @@ function App() {
                       </Text>
                     </Col>
                   </Card.Header>
-                  <Card.Body css={{ p: 0 }}>
+                  <Spacer y={0.5} />
+                  <Card.Body>
                     <Todo
                         key={index}
                         index={index}
