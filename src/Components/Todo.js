@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { Button, Card, Form } from 'react-bootstrap';
+import { Button } from '@nextui-org/react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Todo({ todo, index, markTodo, removeTodo }) {

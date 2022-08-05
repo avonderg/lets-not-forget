@@ -5,8 +5,10 @@
 
 import React from "react";
 import "./App.css";
+import { NextUIProvider } from '@nextui-org/react';
 import Todo from "./Components/Todo";
-import { Button, Card, Form } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import {Button, Card} from '@nextui-org/react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function FormTodo({ addTodo }) {
@@ -62,6 +64,7 @@ function App() {
   };
 
   return (
+      <NextUIProvider>
       <div className="app">
         <div className="container">
           <h1 className="text-center mb-4">Todo List</h1>
@@ -83,6 +86,7 @@ function App() {
           </div>
         </div>
       </div>
+    </NextUIProvider>
   );
 }
 
