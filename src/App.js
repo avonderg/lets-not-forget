@@ -28,7 +28,7 @@ function FormTodo({ addTodo }) {
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="inputTitle">
           {/*<Form.Label>Task Title</Form.Label>*/}
-          <Text color="warning">
+          <Text b color="warning">
             Task Title
           </Text>
           <Form.Control size="sm" type="title" value={header} onChange={e => setHeader(e.target.value)} placeholder="Enter title" />
@@ -36,7 +36,7 @@ function FormTodo({ addTodo }) {
 
         <Form.Group className="mb-3" controlId="inputBody">
           {/*<Form.Label >Task Description</Form.Label>*/}
-          <Text color="warning">
+          <Text b color="warning">
             Task Description
           </Text>
           <Form.Control size="sm" type="descr"  value={value} onChange={e => setValue(e.target.value)} placeholder="Enter description" />
@@ -106,19 +106,25 @@ function App() {
           >
             A simple to-do platform, for those some of those things you just can't afford to forget. Don't worry, we've got you covered.
           </Text>
-          <Spacer y={5} />
+          <Spacer y={4} />
           <FormTodo addTodo={addTodo} />
           <Spacer y={2} />
           <Grid.Container gap={2} justify="center">
             {todos.map((todo, index) => (
                 <Grid xs={4}>
                 <Card isHoverable variant="bordered" title={todo.header}>
-                  <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+                  <Card.Header css={{ position: "absolute", zIndex: 1, top: 4 }}>
+                    <img
+                        alt="forget me not"
+                        src="https://p.turbosquid.com/ts-thumb/Ws/j24pzG/gm/1/png/1648613590/1920x1080/fit_q99/fe9580b795214016bd71de0a98dd958d22eb724f/1.jpg"
+                        width="34px"
+                        height="34px"
+                    />
                     <Col>
                       <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
                         To-Do
                       </Text>
-                      <Text h3 color="black">
+                      <Text h3 color="secondary">
                         {todo.header}
                       </Text>
                     </Col>
