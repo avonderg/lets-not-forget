@@ -66,7 +66,7 @@ function App() {
 
   // adds a new todo
   const addTodo = (header, text) => {
-    const newTodos = [...todos,[header,text]];
+    const newTodos = [...todos,{header,text}];
     setTodos(newTodos);
   };
 
