@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  padding: 30px;
+  background-color: floralwhite;
 }
 
 .App-logo {
@@ -7,10 +9,6 @@
   pointer-events: none;
 }
 
-.app {
-  padding: 30px;
-  background-color: floralwhite;
-}
 
 .todo {
   align-items: center;
