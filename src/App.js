@@ -36,7 +36,7 @@ function FormTodo({ addTodo }) {
           <Form.Control type="descr"  value={value} onChange={e => setValue(e.target.value)} placeholder="Enter description" />
         </Form.Group>
 
-        <Button variant="primary mb-3" type="submit">
+        <Button shadow color="gradient" type="submit">
           Submit
         </Button>
       </Form>
