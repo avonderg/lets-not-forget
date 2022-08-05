@@ -92,7 +92,7 @@ function App() {
           </Text>
           <Text
               h4
-              size={60}
+              size={40}
               css={{
                 textGradient: "45deg, $purple600 -20%, $pink600 100%",
               }}
@@ -100,7 +100,9 @@ function App() {
           >
             A simple to-do platform, for those some of those things you just can't afford to forget. Don't worry, we've got you covered.
           </Text>
+          <Spacer y={10} />
           <FormTodo addTodo={addTodo} />
+          <Spacer y={2} />
           <Grid.Container gap={2} justify="center">
             {todos.map((todo, index) => (
                 <Grid xs={4}>
