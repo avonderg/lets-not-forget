@@ -27,12 +27,18 @@ function FormTodo({ addTodo }) {
   return (
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="inputTitle">
-          <Form.Label>Task Title</Form.Label>
+          {/*<Form.Label>Task Title</Form.Label>*/}
+          <Text color="warning">
+            Task Title
+          </Text>
           <Form.Control size="sm" type="title" value={header} onChange={e => setHeader(e.target.value)} placeholder="Enter title" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="inputBody">
-          <Form.Label >Task Description</Form.Label>
+          {/*<Form.Label >Task Description</Form.Label>*/}
+          <Text color="warning">
+            Task Description
+          </Text>
           <Form.Control size="sm" type="descr"  value={value} onChange={e => setValue(e.target.value)} placeholder="Enter description" />
         </Form.Group>
 
@@ -100,7 +106,7 @@ function App() {
           >
             A simple to-do platform, for those some of those things you just can't afford to forget. Don't worry, we've got you covered.
           </Text>
-          <Spacer y={10} />
+          <Spacer y={5} />
           <FormTodo addTodo={addTodo} />
           <Spacer y={2} />
           <Grid.Container gap={2} justify="center">
