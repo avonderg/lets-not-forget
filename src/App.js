@@ -160,7 +160,7 @@ function App() {
           </Grid.Container>>
         </div>
         <Text color="#ff4ecd" style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
-          Made with ❤️ by  <Link b color="#ff4ecd" href="https://github.com/avonderg">  alex vdg </Link>.
+          Made with ❤️ by avonderg on GitHub.
         </Text>
       </div>
     </NextUIProvider>
