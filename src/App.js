@@ -95,6 +95,16 @@ function App() {
             {todos.map((todo, index) => (
                 <Grid xs={4}>
                 <Card isHoverable variant="bordered" title={todo.header}>
+                  <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+                    <Col>
+                      <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
+                        To-Do
+                      </Text>
+                      <Text h3 color="black">
+                        {todo.header}
+                      </Text>
+                    </Col>
+                  </Card.Header>
                   <Card.Body>
                     <Todo
                         key={index}
