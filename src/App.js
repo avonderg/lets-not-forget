@@ -94,7 +94,7 @@ function App() {
           <Grid.Container gap={2} justify="center">
             {todos.map((todo, index) => (
                 <Grid xs={4}>
-                <Card isHoverable variant="bordered">
+                <Card isHoverable variant="bordered" title={todo.header}>
                   <Card.Body>
                     <Todo
                         key={index}
