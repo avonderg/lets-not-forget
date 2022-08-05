@@ -27,13 +27,13 @@ function FormTodo({ addTodo }) {
   return (
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="inputTitle">
-          <Form.Label weight="bold">Task Title</Form.Label>
-          <Form.Control type="title" value={header} onChange={e => setHeader(e.target.value)} placeholder="Enter title" />
+          <Form.Label>Task Title</Form.Label>
+          <Form.Control type="title" size="sm" value={header} onChange={e => setHeader(e.target.value)} placeholder="Enter title" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="inputBody">
-          <Form.Label weight="bold">Task Description</Form.Label>
-          <Form.Control type="descr"  value={value} onChange={e => setValue(e.target.value)} placeholder="Enter description" />
+          <Form.Label >Task Description</Form.Label>
+          <Form.Control type="descr" size="sm" value={value} onChange={e => setValue(e.target.value)} placeholder="Enter description" />
         </Form.Group>
 
         <Button shadow color="gradient" type="submit">
